@@ -1,0 +1,82 @@
+body {
+    background-image: url(img/bg.jpg);
+    background-color: #343b43;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: top;
+    padding: 20px;
+    font-family: Helvetica;
+}
+
+.widget {
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+
+    background: rgba(155, 252, 255, 0.42);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(155, 252, 255, 0.41);
+}
+
+#coin-name {
+    font-size: 26px;
+    opacity: 0.75;
+}
+
+#crypton-rate {
+    font-size: 50px;
+}
+
+#crypton-icon {
+    /*position: absolute;
+    left: 12px;
+    top: 8px;*/
+    width: 48px;
+}
+
+.widget-link {
+    display: inline-block;
+    background: #0084ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.widget-link#coingecko {
+    background: #4BCC00;
+}
+
+.widget-link#lbank {
+    background: #292929;
+}
+
+.widget-link img {
+    width: 32px;
+}
+
+#banner-message.alt {
+    background: #0084ff;
+    color: #fff;
+    margin-top: 40px;
+    width: 200px;
+}
+
+#banner-message.alt button {
+    background: #fff;
+    color: #000;
+}
