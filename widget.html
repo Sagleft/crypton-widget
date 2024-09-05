@@ -25,6 +25,38 @@
             <a href="https://www.lbank.com/trade/crp_usdt" target="_blank" class="widget-link" id="lbank">
                 <img src="img/lbank.png">
             </a>
-          </div>          
+          </div>
+
+          <script src="js/crypton-api.js?v1.0"></script>
+          <script>
+            var widgetRate = document.getElementById('crypton-rate');
+
+            function updateRate(newRate = 0.5) {
+                widgetRate.innerText = "$" + newRate;
+            }
+
+            // Wrap all the code in an async function
+            async function getRate() {
+                const API = new CryptonAPI(transport, saveToken);
+                try {
+                    const response = await API.pairs(); // Waiting for response from API
+                    const pairs = response.pairs;
+                    const crpUsdtPair = pairs.find(pair => pair.pair.pair === 'crp_usdt');
+
+                    if (crpUsdtPair) {
+                        const closePrice = crpUsdtPair.data_market.close;
+                        updateRate(closePrice);
+                    } else {
+                        console.log('Pair crp_usdt not found.');
+                    }
+                } catch (error) {
+                    console.error('Error while getting pairs:', error);
+                }
+            }
+
+            // Run the main function
+            getRate();
+            setInterval(getRate, 60000);
+          </script>
     </body>
 </html>
