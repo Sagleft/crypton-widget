@@ -7,7 +7,8 @@ Example of a Crypton rate widget that you can add to your website. It uses the C
 
 ![screenshot](img/screenshot.jpg)
 
-The widget can be further developed to visualize other data from the CRP.IS exchange. In the widget code, you can change the trading pair to fetch the latest rate.
+> The widget can be further developed to visualize other data from the CRP.IS exchange.
+> In the widget code, you can change the trading pair to fetch the latest rate.
 
 ### Features
 - Glassmorphism style.
